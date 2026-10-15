@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoMind AI | E-waste, reimagined</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#"><span class="logo">♻</span> EcoMind <span class="ai">AI</span></a>
+    <div class="navlinks"><a href="#how">How it works</a><a href="#impact">Impact</a><a href="#analyzer" class="navbtn">Analyze e-waste ↗</a></div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> SMARTER E-WASTE MANAGEMENT</div>
+        <h1>Old tech.<br><span>New purpose.</span></h1>
+        <p class="lead">Turn electronic waste into an opportunity. Discover safer reuse, responsible recycling, and the positive impact of your next action.</p>
+        <div class="hero-actions"><a class="primary" href="#analyzer">Start analyzing <span>→</span></a><a class="secondary" href="#how">Explore the process</a></div>
+        <div class="mini-stats"><div><b>♻ Reuse first</b><small>Extend product life</small></div><div><b>🌱 Recycle safely</b><small>Protect our ecosystem</small></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="planet">🌎</div>
+        <div class="float-card card-a"><span>⚡</span><div><b>Smart sorting</b><small>Find the next best step</small></div></div>
+        <div class="float-card card-b"><span>🌿</span><div><b>Planet positive</b><small>Every device counts</small></div></div>
+        <div class="leaf leaf-one">✦</div><div class="leaf leaf-two">✧</div>
+      </div>
+    </section>
+
+    <section class="section" id="analyzer">
+      <div class="section-heading"><div class="eyebrow">YOUR E-WASTE ASSISTANT</div><h2>Give your gadget a <span>second chance.</span></h2><p>Upload a photo to get reuse and recycling guidance from the EcoMind prototype.</p></div>
+      <div class="analyzer">
+        <div class="upload-panel">
+          <div class="upload-icon">⌁</div><h3>Upload your e-waste photo</h3><p>Choose a clear image of a phone, laptop, battery, cable, or screen.</p>
+          <label class="dropzone" for="imageInput"><span class="upload-symbol">↑</span><b id="fileLabel">Click to choose an image</b><small>JPG, PNG or WEBP · max 8 MB</small><input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp"></label>
+          <button id="analyzeBtn" class="primary full">Analyze item <span>→</span></button>
+          <p class="tiny">Prototype note: this starter version uses the filename as a demo category hint; it does not yet recognize objects visually.</p>
+        </div>
+        <div class="result-panel" id="resultPanel">
+          <div class="result-top"><span class="result-icon">🌱</span><span class="status">READY WHEN YOU ARE</span></div>
+          <h3>Your eco report</h3><p class="muted">Your results will appear here after analysis.</p>
+          <div class="placeholder"><div class="placeholder-icon">♻</div><b>Small action, big impact</b><span>Choose reuse when safe. Recycle through authorized collection points.</span></div>
+          <div id="resultContent" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" id="how">
+      <div class="section-heading"><div class="eyebrow">SIMPLE BY DESIGN</div><h2>From clutter to <span>circularity.</span></h2></div>
+      <div class="steps">
+        <article class="step"><div class="step-num">01</div><div class="step-icon">📸</div><h3>Identify</h3><p>Upload a device photo and start an e-waste assessment.</p></article>
+        <article class="step"><div class="step-num">02</div><div class="step-icon">🛠️</div><h3>Reuse smarter</h3><p>Explore repair, donation, and safe ways to extend product life.</p></article>
+        <article class="step"><div class="step-num">03</div><div class="step-icon">🌍</div><h3>Measure impact</h3><p>See an illustrative impact estimate and choose responsible recycling.</p></article>
+      </div>
+    </section>
+
+    <section class="impact" id="impact"><div><div class="eyebrow">A BETTER DIGITAL FUTURE</div><h2>Technology should help<br>the planet, not harm it.</h2><p>Keep hazardous electronics out of household waste. Choose repair, reuse, and authorized recycling to help protect people, animals, and the environment.</p></div><div class="impact-mark"><span>🌿</span><b>Think circular.</b><small>Use longer. Waste less.</small></div></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="logo">♻</span> EcoMind <span class="ai">AI</span></a><span>Designed for a cleaner digital future.</span><span>© 2026 EcoMind AI · Prototype</span></footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
